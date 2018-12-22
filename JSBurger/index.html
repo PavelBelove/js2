@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSBurger</title>
+    <script src="Stuffing.js"></script>
+    <script src="Topping.js"></script>
+    <script src="Sizes.js"></script>
+    <script src="filling.js"></script>
+    <script src="Burger.js"></script>
+</head>
+
+<body>
+    <script>
+    let b1 = new Burger("SIZE_SMALL","STUFFING_CHEESE", "TOPPING_MAYO");
+    b1.addTopping("TOPPING_SPICE");
+    //console.log(b1.getStuffing());
+    console.log(b1.calculateCalories());
+    </script>
+
+</body>
+
+</html>

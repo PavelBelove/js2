@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Menu</title>
+    <script src="BaseClass.js"></script>
     <script src="Menu.js"></script>
     <script src="MenuSection.js"></script>
     <script src="MenuItem.js"></script>
@@ -11,17 +12,17 @@
         window.onload = function () {
             //Пункты меню
             let texts2 = [
-            new MenuItem('#', 'Подстатья 1'),
-            new MenuItem('#', 'Подстатья 2'),
-            new MenuItem('#', 'Подстатья 3'),
+                new MenuItem('#', 'Подстатья 1'),
+                new MenuItem('#', 'Подстатья 2'),
+                new MenuItem('#', 'Подстатья 3'),
             ]
             let texts = [
-            new MenuItem('#', 'Статья 1'),
-            new MenuItem('#', 'Статья 2'),
-            new MenuItem('#', 'Статья 3'),
-            new MenuSection('content2', 'content', texts2),
+                new MenuItem('#', 'Статья 1'),
+                new MenuItem('#', 'Статья 2'),
+                new MenuItem('#', 'Статья 3'),
+                new MenuSection('content2', 'content', texts2),
             ]
-          
+
             var items = [
                 new MenuItem('/', 'Главная'),
                 new MenuItem('/about', 'О нас'),
@@ -40,6 +41,14 @@
 
             //Отображаем на странице html код, который вернул render
             menuContainer.innerHTML = menu.render();
+
+            // через 10 секунд удаляем меню, вызвав remove()
+            setTimeout(() => {
+                menu.remove()
+            }, 10000);
+            
+            //menu.remove();
+
         };
     </script>
 </head>

@@ -2,7 +2,7 @@
 //несколько, но повторяться они не могут. Поэтому логично использовать для их хранения множество set
 class Burger {
     constructor(size, stuffing, ) {
-        console.log("test" + toppings[arguments[2]]);
+
         try {
             if (!sizes[size] && !stuffings[stuffing]) {
                 throw (this);
@@ -29,7 +29,7 @@ class Burger {
     //добавляем добавку.
     addTopping(topping) {
         try {
-            if (!toppings[topping]) {                
+            if (!toppings[topping]) {
                 throw (topping);
             }
 
@@ -43,40 +43,40 @@ class Burger {
     // но мне это кажется жутко нелогичным: Клиент дважды попросил с майонезом, а получил без майонеза.
     // поэтому пусть будет отдельный метод.
 
-    delTopping(topping) {              
-            this.toppings.delete(toppings[topping]);       
+    delTopping(topping) {
+        this.toppings.delete(toppings[topping]);
     }
     //Получить список добавок. У меня возвращает SET, если нужен строго массив, как в задании, можно выполнить преобразование.
-    getToppings(){
+    getToppings() {
         return this.toppings;
     }
     //начинка
-    getStuffing(){
+    getStuffing() {
         return this.stuffing.name;
     }
 
     //Размер
-    getSize(){
+    getSize() {
         return this.size.name;
     }
 
     //Счетчик цены
-    calculatePrice(){
+    calculatePrice() {
         let prise = this.stuffing.price + this.size.price;
-        for (let i of this.toppings){
+        for (let i of this.toppings) {
             prise += i.price;
-        } 
+        }
 
         return prise;
     }
 
     //Счетчик калорий
-    calculateCalories(){
+    calculateCalories() {
         let calories = this.stuffing.calories + this.size.calories;
-        for (let i of this.toppings){
-            console.log(i);
+        for (let i of this.toppings) {
+
             calories += i.calories;
-        } 
+        }
 
         return calories;
     }

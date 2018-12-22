@@ -6,20 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JSBurger</title>
-    <script src="Stuffing.js"></script>
-    <script src="Topping.js"></script>
-    <script src="Sizes.js"></script>
-    <script src="filling.js"></script>
-    <script src="Burger.js"></script>
+    <script src="Stuffing.js" defer></script>
+    <script src="Topping.js" defer></script>
+    <script src="Sizes.js" defer></script>
+    <script src="filling.js" defer></script>
+    <script src="Burger.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <script>
-    let b1 = new Burger("SIZE_SMALL","STUFFING_CHEESE", "TOPPING_MAYO");
-    b1.addTopping("TOPPING_SPICE");
-    //console.log(b1.getStuffing());
-    console.log(b1.calculateCalories());
-    </script>
+    <div id="wrapper">
+        <div class="block">
+            <label> Размер:
+                <select id="size">
+                    <option value="SIZE_SMALL">Маленький</option>
+                    <option value="SIZE_LARGE">Большой</option>
+                </select>
+            </label>
+        </div>
+        <div class="block">
+            <label> Начинка:
+                <select id="stuffing">
+                    <option value="STUFFING_CHEESE">Сыр</option>
+                    <option value="STUFFING_SALAD">Салат</option>
+                    <option value="STUFFING_POTATO">Картофель</option>
+                </select>
+            </label>
+        </div>
+        <div class="block">
+            <label> Приправа:
+                <input type="checkbox" name="Приправа" id="TOPPING_SPICE"> </label>
+            <label> Майонез:
+                <input type="checkbox" name="Майонез" id="TOPPING_MAYO"> </label>
+        </div>
+        <div class="block">
+            <button id="submit">Рассчитать</button>
+        </div>
+        <div class="block">
+            <p id="price"></p>
+            <p id="calories"></p>
+        </div>
+    </div>
+
+    <!-- <script>
+        let b1 = new Burger("SIZE_SMALL", "STUFFING_CHEESE", "TOPPING_MAYO");
+        b1.addTopping("TOPPING_SPICE");
+        //console.log(b1.getStuffing());
+        console.log(b1.calculateCalories());
+    </script> -->
 
 </body>
 

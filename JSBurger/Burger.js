@@ -5,7 +5,7 @@ class Burger {
 
         try {
             if (!sizes[size] && !stuffings[stuffing]) {
-                throw (this);
+                throw new HamburgerException('Вы должны передать размер и начинку гамбургера');
             }
             this.size = sizes[size];
             this.stuffing = stuffings[stuffing];
@@ -19,24 +19,22 @@ class Burger {
             }
             this.toppings = toppingsArr;
         } catch (e) {
-            this.HamburgerException();
+            alert("Таких бургеров нэма!")
         };
     }
 
-    HamburgerException() {
-        alert("Таких бургеров нэма!")
-    }
+  
     //добавляем добавку.
     addTopping(topping) {
         try {
             if (!toppings[topping]) {
-                throw (topping);
+                throw new HamburgerException('Вы должны передать добавку');
             }
 
             this.toppings.add(toppings[topping])
 
         } catch (e) {
-            this.HamburgerException();
+            alert("Таких бургеров нэма!");
         };
     }
     //Убираем добавку. В задании, если я правильно понял, за это должна была отвечать addTopping(topping)

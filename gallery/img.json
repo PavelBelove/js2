@@ -1,0 +1,22 @@
+[
+    {
+        "prev": "img/preview/iskrennjaja_radost.jpg",
+        "img" : "img/iskrennjaja_radost.jpg"
+    },
+    {
+        "prev": "img/preview/malenkaja_balerina.jpg",
+        "img" : "img/malenkaja_balerina.jpg"
+    },
+    {
+        "prev": "img/preview/oboi_fejrverki.jpg",
+        "img" : "img/oboi_fejrverki.jpg"
+    },
+    {
+        "prev": "img/preview/pylajushhie_drova.jpg",
+        "img" : "img/pylajushhie_drova.jpg"
+    },
+    {
+        "prev": "img/preview/zabeg.jpg",
+        "img" : "img/zabeg.jpg"
+    }    
+]

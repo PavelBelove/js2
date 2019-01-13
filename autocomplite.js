@@ -12,4 +12,5 @@ $(document).ready(() => {
 
     });
     $( "#autocomplite" ).autocomplete({source: autoCitys});
+    $( "#autocomplite" ).autocomplete( "option", "minLength", 3 );
 });

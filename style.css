@@ -86,3 +86,7 @@ div.t4 {
     background: #EFEFEF;
     padding: 0 12px;
 }
+form {
+margin: 20px auto;
+text-align: center;
+}

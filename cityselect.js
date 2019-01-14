@@ -25,7 +25,7 @@ $(document).ready(() => {
             for (i of rusRegions) {
                 regHtml += `<option>${i}</option>`;
             }
-            console.log(regHtml);
+            //console.log(regHtml);
 
             $("#region").html(regHtml);
 

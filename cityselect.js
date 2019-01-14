@@ -13,6 +13,7 @@ $(document).ready(() => {
                     rusRegions.push(i.region);
                     rusCitys[i.region] = [];
                 }
+                
                 rusCitys[i.region].push(i.city);
 
 
@@ -22,9 +23,9 @@ $(document).ready(() => {
 
             let regHtml = "";
             for (i of rusRegions) {
-                regHtml += `<option>${i}<option/>`;
+                regHtml += `<option>${i}</option>`;
             }
-            //console.log(regHtml);
+            console.log(regHtml);
 
             $("#region").html(regHtml);
 
@@ -34,7 +35,7 @@ $(document).ready(() => {
                 let key = $('#region :selected').text();
                 // console.log(key)
                 for (i of rusCitys[key]){
-                    cityHtml += `<option>${i}<option/>`;
+                    cityHtml += `<option>${i}</option>`;
                 }
                 $("#city").html(cityHtml);
             });

@@ -14,11 +14,10 @@ $(document).ready(() => {
     $( "#autocomplite" ).autocomplete({source: autoCitys});
     $( "#autocomplite" ).autocomplete( "option", "minLength", 3 );
 
-    //Решение без JQueryUI
+//Решение без JQueryUI
 
 
 $autocomplite = $('#autocomplite2');
-
 $autocomplite.on( 'input', () => {
 var $input = $autocomplite.val(),
     $search = $('#search'); //Блок для вывода результатов 

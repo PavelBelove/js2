@@ -90,3 +90,27 @@ form {
 margin: 20px auto;
 text-align: center;
 }
+
+#autoform {
+    position: relative;
+}
+
+.search {
+    position: absolute;
+    left: 223px;
+    min-width: 152px;
+    background-color: white;
+    border: 1px solid cornflowerblue;
+    font-size: 0.9em;
+    color: #263238;
+}
+.search_result {
+    margin: 0;
+}
+.search_result:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}
+.search_result_active {
+    background-color: lightblue !important;
+}

@@ -33,7 +33,7 @@ class Comment {
                 success: function (data) {
                     $commentBtnOk.remove();
                     $commentBtnDel.remove();
-                    console.log(this)
+                    //console.log(this)
                 },
                 error: function (err) {
                     console.log('Ошибка', err);

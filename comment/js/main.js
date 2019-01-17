@@ -12,7 +12,7 @@ $(document).ready(function () {
                 id++
                 let comment = new Comment(id, i.autor, i.text, i.moderate);
                 comment.render($commentContainer);
-                console.log(i.autor)
+                //console.log(i.autor)
             }
         },
         error: function (err) {
@@ -30,6 +30,8 @@ $(document).ready(function () {
             id++
             let comment = new Comment(id, $autor.val(), $appendComment.val());
             comment.render($commentContainer);
+            $autor.val("");
+            $appendComment.val("");
             $.ajax({
                 type: 'get',
                 url: './json/review.add.json',
@@ -37,7 +39,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 success: function (data) {
                     alert(data.userMessage);
-                    console.log(this)
+                    //console.log(this)
                 }
             });
         } else {

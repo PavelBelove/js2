@@ -34,6 +34,9 @@ class Comment {
                     $commentBtnOk.remove();
                     $commentBtnDel.remove();
                     console.log(this)
+                },
+                error: function (err) {
+                    console.log('Ошибка', err);
                 }
             });
 
@@ -49,6 +52,9 @@ class Comment {
                 success: function (data) {
                     $commentContainer.remove();
 
+                },
+                error: function (err) {
+                    console.log('Ошибка', err);
                 }
             });
 

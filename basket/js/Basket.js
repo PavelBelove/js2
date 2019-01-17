@@ -71,10 +71,9 @@ class Basket {
         
         let items = this.basketItems
         let flag = -1;
-        console.log()
-        for (let i in items){
+                for (let i in items){
             if (items[i].id_product == idProduct){
-                console.log(items[i]);
+                //console.log(items[i]);
                 flag = i;
             }
         }
@@ -100,6 +99,6 @@ class Basket {
         $basketData.append(`<p>Общая стоимость: ${this.amount}</p>`);
 
         //TODO: для отладки
-        console.log(this.basketItems);
+        //console.log(this.basketItems);
     }
 }

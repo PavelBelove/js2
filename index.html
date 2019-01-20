@@ -17,78 +17,68 @@
 </head>
 
 <body>
-    <div class="carousel shadow">
-        <div class="carousel-button-left"><a href="#"></a></div>
-        <div class="carousel-button-right"><a href="#"></a></div>
-        <div class="carousel-wrapper">
-            <div class="carousel-items">
-                <div class="carousel-block" id="good1" >
-                    <img src="/images/1.jpg" alt=""   />
-                    <p>Quantum Reax Baitcast Reel</p>
-                </div>
-                <div class="carousel-block " id="good2">
-                    <img src="/images/2.jpg" alt=""  />
-                    <p>Dimension Low Profile Baitcast Reel</p>
-                </div>
-                <div class="carousel-block " id="good3">
-                    <img src="/images/3.jpg" alt=""  />
-                    <p>Quantum Catalyst spinning Reel</p>
-                </div>
-                <div class="carousel-block " id="good4">
-                    <img src="/images/4.jpg" alt=""  />
-                    <p>Alpha Spinning Reel</p>
-                </div>
-                <!-- Увы, костыль. Конфликт работы галереи и "перетаскивания". Блок 
-                .carousel-wrapper должен иметь свойство overflow: hidden; 
-                чтобы скрывать "лишние" дивы с товарами. Но это свойство 
-                так же скрывает блок и при попытке перетаскивания. 
-                    Достаточно долго копался, пытаясь сделать картинки видимыми, 
-                сохранив работоспособность карусели. Увы, пришлось закометировать
-                overflow: hidden, а за одно и "лишние" товары, чтобы не ломали верстку.
-                    В таком виде работает, но вопрос остается открытым - как при 
-                включенном overflow: hidden; на контейнере сделать блок видимым при перетаскивании.
-            -->
-                <!-- <div class="carousel-block ">
-                    <img src="/images/5.jpg" alt="" />
-                    <p>Quantum Accurist PT Baitcaster</p>
-                </div>
-                <div class="carousel-block ">
-                    <img src="/images/6.jpg" alt="" />
-                    <p>Quantum Kinetic Baitcast Reel</p>
-                </div>
-                <div class="carousel-block ">
-                    <img src="/images/7.jpg" alt="" />
-                    <p>Quantum Tour Baitcast Reel</p>
-                </div> -->
+    <div class="wrap">
+        <div class="carousel shadow">
+            <div class="carousel-button-left"><a href="#"></a></div>
+            <div class="carousel-button-right"><a href="#"></a></div>
+            <div class="carousel-wrapper">
+                <div class="carousel-items">
+                    <div class="carousel-block" id="good1">
+                        <img src="/images/1.jpg" alt="" />
+                        <p>Quantum Reax <br> Baitcast Reel</p>
+                    </div>
+                    <div class="carousel-block " id="good2">
+                        <img src="/images/2.jpg" alt="" />
+                        <p>Dimension Low Profile<br> Baitcast Reel</p>
+                    </div>
+                    <div class="carousel-block " id="good3">
+                        <img src="/images/3.jpg" alt="" />
+                        <p>Quantum Catalyst<br> spinning Reel</p>
+                    </div>
+                    <div class="carousel-block " id="good4">
+                        <img src="/images/4.jpg" alt="" />
+                        <p>Alpha Spinning Reel</p>
+                    </div>                    
+                    <div class="carousel-block "id="good5">
+                        <img src="/images/5.jpg" alt="" />
+                        <p>Quantum Accurist<br> PT Baitcaster</p>
+                    </div>
+                    <div class="carousel-block " id="good6">
+                        <img src="/images/6.jpg" alt="" />
+                        <p>Quantum Kinetic<br> Baitcast Reel</p>
+                    </div>
+                    <div class="carousel-block " id="good7">
+                        <img src="/images/7.jpg" alt="" />
+                        <p>Quantum Tour<br> Baitcast Reel</p>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="form shadow">
+                <form action="">
+                    <input id="name" type="text" placeholder="Имя">
+                    <input id="phone" type="text" placeholder="+7(000)000-0000">
+                    <input id="mail" type="text" placeholder="youmail@mail.ru">
+                    <input type="text" id="datepicker" placeholder="Дата рождения">
+                    <textarea id="txt" name="txt" cols="23" rows="3" placeholder="Ваше сообщение"></textarea>
+
+                </form>
+                <button id="btn">Проверить</button>
+                <div id="dialog" title="Отправка формы">
+
+                </div>
+            </div>
+            <div class="basket shadow">
+                <h2>Drop goods here</h2>
+                <!-- <img src="images/basket.png" alt="basket"> -->
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="form shadow">   
-        <form action="">
-            <input id="name" type="text" placeholder="Имя">
-            <input id="phone" type="text" placeholder="+7(000)000-0000">
-            <input id="mail" type="text" placeholder="youmail@mail.ru">
-            <input type="text" id="datepicker" placeholder="Дата рождения">
-            <textarea id="txt" name="txt" cols="23" rows="3" placeholder="Ваше сообщение"></textarea>
-
-        </form>
-        <button id="btn">Проверить</button>
-        <div id="dialog" title="Отправка формы">
-
-        </div>
-    </div>
-    <div class="basket shadow">
-        <h2>Drop goods here</h2>
-        <!-- <img src="images/basket.png" alt="basket"> -->
-    </div>
-    </div>
-
-    <script>
-        
-    </script>
+   
 
 </body>
 

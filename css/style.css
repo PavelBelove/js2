@@ -78,7 +78,10 @@ input, textarea, button {
 width: 300px;
 height: 300px;
 text-align: center;
-line-height: 200px;
+
+background-image: url(../images/basket.jpg);
+background-size: cover;
+opacity: 50%;
 }
  /*********** SHADOW ***********/
  .shadow{

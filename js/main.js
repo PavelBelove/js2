@@ -127,7 +127,7 @@ $(document).on('mouseleave', '.carousel', function () {
 //----------------------------------------------------------------------------------------------------------------------------------
 
 $(function () {
-    $(".carousel-block").draggable({
+    $(".draggable").draggable({
         containment: 'document',
         revert: 'invalid',
         appendTo: 'body'

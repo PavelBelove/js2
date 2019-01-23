@@ -1,1 +1,1 @@
-body{background-color:coral;font-size:3em}p{color:red}
+.container{width:600px;margin:20px auto}#newComment,.comment{margin:10px;border-radius:10px}.comment{padding:10px;border:1px solid #3cb371;min-width:600px}button,h3,input,p,span{margin:10px}#newComment{min-width:615px}

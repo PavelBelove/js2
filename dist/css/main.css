@@ -1,6 +1,18 @@
-body {
-  background-color: coral;
-  font-size: 3em; }
+.container {
+  width: 600px;
+  margin: 20px auto; }
 
-p {
-  color: red; }
+.comment {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid mediumseagreen;
+  min-width: 600px;
+  border-radius: 10px; }
+
+button, p, h3, span, input {
+  margin: 10px; }
+
+#newComment {
+  min-width: 615px;
+  margin: 10px;
+  border-radius: 10px; }

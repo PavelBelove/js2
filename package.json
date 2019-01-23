@@ -8,7 +8,7 @@
     "gulp": "gulp",
     "gulp_test": "gulp test"
   },
-  "author": "Igor",
+  "author": "Pavel",
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.26.3",
@@ -19,9 +19,15 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglifyjs": "^0.6.2"
+    //"gulp-uglifyjs": "^0.6.2", // Не поддерживает ES6
+    "gulp-uglify-es": "1.0.4"   //  Поэтому нужен другой минификатор.
+
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-uglify-es": "^1.0.4"
   }
 }

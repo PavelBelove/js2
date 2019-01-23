@@ -33,7 +33,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('sass', function () {
-    gulp.src('./app/sass/**/*.sass')
+    gulp.src('./app/scss/**/*.scss')
         .pipe(sass())
         .pipe(autoPrefix())
         .pipe(gulp.dest('./dist/css'))
@@ -51,7 +51,7 @@ gulp.task('clear', function () {
 gulp.task('watchFiles', function () {
     gulp.watch(['./app/html/index.html'], ['html']);
     gulp.watch('./app/js/**/*.js', ['js']);
-    gulp.watch('./app/sass/**/*.sass', ['sass']);
+    gulp.watch('./app/scss/**/*.scss', ['sass']);
 });
 
 gulp.task('server', function () {

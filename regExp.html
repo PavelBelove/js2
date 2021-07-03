@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RegExp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <input id="name" type="text" placeholder="Имя">
+            <input id="phone" type="text" placeholder="+7(000)000-0000">
+            <input id="mail" type="text" placeholder="youmail@mail.ru">
+            <textarea id="txt" name="txt" cols="23" rows="3" placeholder="Ваше сообщение"></textarea>
+
+        </form>
+        <button id="btn">Проверить</button>
+    </div>
+
+    <script>
+        let str =
+            "Встретились как-то три богатыря и три мушкетера, решили в удали состязаться. \nПервые начинают мушкетеры. д'Артаньян говорит Арамису указывая на Добрыню: \n'Арамис, нарисуй мелом на нем маааленькую точечку.' \nАрамис подходит к Добрыне, аккуратно на груди отмечает мелом совсем незаметную точку. \nд'Артаньян быстрым выпадом попадает прямо в нее. Добрыня отряхивается и говорит: \n'Проволочиной своей чуть кольчугу не поцарапал! Алеша, обсыпь его мукой, Да подай-ка булаву.' ";
+        console.log(str);
+        // Task1
+        console.log(str.replace(/'/gm, '"'));
+        console.log("От удара булавой у д'Артаньяна аж апостроф раздвоился! ");
+        // Task2
+        console.log(str.replace(/\s'|'\s/gm, '"'));
+        console.log("От удара булавой д'Артаньян проглотил пробельные символы.");
+        console.log(str.replace(/\s'|'\s/gm, (str, offset, s) => {
+            if (str.slice(-1) == "'"){
+                return '\n"';
+            }
+            return '" ';
+        }));
+        console.log("Когда облако муки рассеялось, все увидели что на сей раз д'Артаньян выдюжил удар");
+        // Маленький эксперимент с последовательным использованием метода replace, чтобы оформить диалог по правилам русского языка.
+        // Прямая речь с новой строки, начинающейся с тире. Вместо закрывающей кавычки оставляем перевод строки.
+        // Наверное, чуть медленнее работать будет, но понятнее читается что на что меняем.
+        console.log(str.replace(/\s'/gm, '\n- ').replace(/'\s+/gm, '\n'));
+        //Task3
+
+        let name = document.querySelector('#name');
+        let phone = document.querySelector('#phone');
+        let mail = document.querySelector('#mail');
+        let txt = document.querySelector('#txt');
+        let btn = document.querySelector('#btn');
+        let message = "";
+
+        btn.addEventListener("click", checkValue);
+
+        function checkValue() {
+            message = "";
+
+            
+            if (!/^[a-zA-Zа-яА-яёЁ\s]+$/.test(name.value) ) {
+                // Если содержится хотя бы один символ кроме диапазона
+                console.log(name.value+ "sdsd");
+                message += 'Заполните корректно поле "Имя"\n';
+            }
+            // Валидация только для той формы записи, что была в задании. Для телефона вообще,
+            // стоит использовать ((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$ - слава Гуглу.
+            if (!/(\+7\(\d{3}\)\d{3}\-\d{4})/.test(phone.value)) {
+                //+7(триЦифры)триЦифры-четыреЦифры
+                //console.log(phone.value);
+                message += 'Заполните корректно поле "Телефон\n"';
+            }
+            if (!/[0-9a-zA-Z\-\.]+@[0-9a-zA-Z\-\.]+\.[a-zA-Z]+/.test(mail.value)) {
+                // мин1ИзДиапазона@мин1ИзДиапазона.мин1ИзДиапазона
+                //console.log(mail.value);
+                message += 'Заполните корректно поле "E-mail;"\n';
+            }
+            if (!/[a-zA-Zа-яА-Я]/.test(txt.value)) {
+                // в поле введена хотя бы одна буква. Ё не проверял, потому что вряд ли сообщение состоящее из одних Ё представляет ценность.
+                //console.log(txt.value);
+                message += 'Текстовое поле должно содержать сообщение\n';
+            }
+            if (message) {
+                alert(message);
+            } else {
+                alert('Форма заполнена корректно')
+            }
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

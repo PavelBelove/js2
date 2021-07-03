@@ -1,0 +1,10 @@
+.container{
+    width: 40%;
+    margin: 0rem auto;
+    margin-top: 5rem;
+}
+input, button, textarea{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+}
